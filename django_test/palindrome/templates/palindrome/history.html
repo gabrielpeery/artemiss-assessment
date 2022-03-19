@@ -1,0 +1,8 @@
+
+{% for instance in history %}
+  <div>
+  {% for key, value in instance.items %}
+    <div>{{key}} {{value}}</div>
+  {% endfor %}
+  </div>
+{% endfor %}

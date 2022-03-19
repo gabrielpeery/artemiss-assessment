@@ -1,0 +1,17 @@
+
+<form action="/palindrome/bulk/"method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name='file'></input>
+  <input type="submit"></input>
+  <div>
+    {% if result %}
+      {% for key, value in result.items %}
+        <div>{{ key }}: {{value}}</div>
+      {% empty %}
+        <div></div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</form>
+
+
